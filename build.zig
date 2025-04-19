@@ -1,8 +1,6 @@
 const std = @import("std");
 
 pub fn build(b: *std.Build) void {
-    const enable_openmp = b.option(bool, "enable-openmp", "Enable OpenMP support") orelse false;
-
     const upstream = b.dependency("zfp", .{});
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
@@ -12,6 +10,7 @@ pub fn build(b: *std.Build) void {
         .target = target,
         .optimize = optimize,
     });
+
     lib.linkLibC();
     lib.addIncludePath(upstream.path("include"));
 
@@ -52,10 +51,7 @@ pub fn build(b: *std.Build) void {
         "zfp.c",
     }, .flags = &.{
         "-fPIC",
-        if (enable_openmp)
-            if (target.result.os.tag == .macos) "-Xclang -fopenmp" else "-fopenmp"
-        else
-            "",
+        "-std=c99",
     } });
 
     lib.installHeadersDirectory(upstream.path("include"), "", .{
