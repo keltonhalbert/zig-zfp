@@ -1,7 +1,7 @@
 .{
     .name = .zfp,
     .version = "1.0.1",
-    .fingerprint = 0xc585898921fa8935, 
+    .fingerprint = 0xc585898921fa8935,
     .minimum_zig_version = "0.14.0",
 
     .dependencies = .{
@@ -14,5 +14,7 @@
     .paths = .{
         "build.zig",
         "build.zig.zon",
+        "LICENSE",
+        "README.md",
     },
 }
