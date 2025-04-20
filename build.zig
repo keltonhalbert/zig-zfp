@@ -57,6 +57,10 @@ pub fn build(b: *std.Build) void {
     lib.installHeadersDirectory(upstream.path("include"), "", .{
         .include_extensions = &.{
             "zfp.h",
+            "zfp/bitstream.h",
+            "zfp/version.h",
+            "zfp/internal/zfp/system.h",
+            "zfp/internal/zfp/types.h",
         },
     });
 
