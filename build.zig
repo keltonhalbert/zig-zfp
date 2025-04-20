@@ -61,8 +61,4 @@ pub fn build(b: *std.Build) void {
     });
 
     b.installArtifact(lib);
-
-    _ = b.addModule("zfp", .{
-        .root_source_file = b.path("src/zfp.zig"),
-    });
 }
