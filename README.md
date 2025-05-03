@@ -1,5 +1,6 @@
+[![Build](https://github.com/keltonhalbert/zfp/actions/workflows/ci.yaml/badge.svg)](https://github.com/keltonhalbert/zfp/actions/workflows/ci.yaml)
 # zfp-zig: zfp packaged for the Zig programming language
-This is the [ZFP C compression library](https://github.com/LLNL/zfp) for the [Zig](https://ziglang.org/) programming language.
+This is the [ZFP C compression library](https://github.com/LLNL/zfp) for the [Zig](https://ziglang.org/) programming language. Currently does not wrap the C++ compressed array classes.
 
 # How do I include it in my Zig program?
 If you are starting a new package: 
