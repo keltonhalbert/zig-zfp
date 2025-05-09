@@ -1,4 +1,4 @@
-[![Build](https://github.com/keltonhalbert/zfp/actions/workflows/ci.yaml/badge.svg)](https://github.com/keltonhalbert/zfp/actions/workflows/ci.yaml)
+[![Build](https://github.com/allyourcodebase/zfp/actions/workflows/ci.yaml/badge.svg)](https://github.com/allyourcodebase/zfp/actions/workflows/ci.yaml)
 # zfp-zig: zfp packaged for the Zig programming language
 This is the [ZFP C compression library](https://github.com/LLNL/zfp) for the [Zig](https://ziglang.org/) programming language. Currently does not wrap the C++ compressed array classes.
 
@@ -9,7 +9,7 @@ If you are starting a new package:
 mkdir my_project; cd my_project
 zig init
 ## add the package to 'build.zig.zon'
-zig fetch --save=zfp git+https://github.com/keltonhalbert/zfp.git
+zig fetch --save=zfp git+https://github.com/allyourcodebase/zfp.git
 ```
 This will add the zig C library as a dependency to your project. 
 Next, if you are linking it to a library or executable, add the following to **build.zig**:
